@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Book a Service - Paws and Feathers</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html, body {
+      height: 100%;
+      font-family: 'Poppins', sans-serif;
+      background-color: #ffffff;
+      color: #111111;
+    }
+
+    body {
+      display: flex;
+      flex-direction: column;
+    }
+
+    nav {
+      background-color: #222222;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    nav a {
+      color: white;
+      padding: 14px 20px;
+      text-decoration: none;
+      text-transform: uppercase;
+      font-weight: 600;
+      font-size: 18px;
+    }
+
+    nav a:hover {
+      background-color: #444444;
+      transition: 0.3s;
+    }
+
+    main {
+      flex: 1;
+      padding: 40px 20px;
+    }
+
+    .section {
+      text-align: center;
+    }
+
+    h2 {
+      font-size: 32px;
+      margin-bottom: 20px;
+    }
+
+    form {
+      max-width: 500px;
+      margin: auto;
+      text-align: left;
+      background: #f9f9f9;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+
+    .form-group {
+      margin-bottom: 15px;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 5px;
+      font-weight: 500;
+    }
+
+    input, select {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+
+    button[type="submit"] {
+      width: 100%;
+      background-color: #ff6b6b;
+      color: white;
+      padding: 12px;
+      border: none;
+      border-radius: 5px;
+      font-size: 16px;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    button[type="submit"]:hover {
+      background-color: #e55a5a;
+    }
+
+    #confirmation {
+      display: none;
+      margin-top: 20px;
+      font-weight: bold;
+      color: green;
+      text-align: center;
+    }
+
+    footer {
+      background-color: #222222;
+      color: white;
+      padding: 40px 20px;
+    }
+
+    .footer-contact {
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      align-items: center;
+      flex-wrap: wrap;
+      margin-top: 10px;
+    }
+
+    .footer-contact a,
+    .footer-contact span {
+      color: white;
+      text-decoration: none;
+      font-size: 16px;
+    }
+
+    .footer-contact a:hover {
+      color: #dddddd;
+    }
+
+    .footer-bottom {
+      text-align: center;
+      margin-top: 20px;
+      font-size: 14px;
+    }
+
+    @media (max-width: 600px) {
+      nav a {
+        font-size: 16px;
+        padding: 12px 10px;
+      }
+
+      h2 {
+        font-size: 24px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <a href="Pet Shop.html">Home</a>
+    <a href="index.html">Products</a>
+    <a href="index.html#promos">Promos</a>
+    <a href="booking.html">Booking</a>
+  </nav>
+
+  <main>
+    <section class="section">
+      <h2>Book a Service</h2>
+      <form id="booking-form">
+        <div class="form-group">
+          <label for="name">Full Name:</label>
+          <input type="text" id="name" name="name" required>
+        </div>
+
+        <div class="form-group">
+          <label for="email">Contact Number:</label>
+          <input type="tel" id="email" name="email" required>
+        </div>
+
+        <div class="form-group">
+          <label for="service">Select Service:</label>
+          <select id="service" name="service" required>
+            <option value="">-- Please Choose --</option>
+            <option value="Pet Grooming">Pet Grooming</option>
+            <option value="Poultry Health Check">Poultry Health Check</option>
+            <option value="Delivery">Product Delivery</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="date">Preferred Date:</label>
+          <input type="date" id="date" name="date" required>
+        </div>
+
+        <div class="form-group">
+          <label for="time">Preferred Time:</label>
+          <input type="time" id="time" name="time" required>
+        </div>
+
+        <button type="submit">Book Now</button>
+      </form>
+
+      <div id="confirmation">Booking confirmed! We’ll contact you shortly.</div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-contact">
+      <span><i class="fas fa-phone"></i> 0917 183 5068</span>
+      <a href="https://www.facebook.com/PawsandFeathersPetandPoultrySupply" target="_blank">
+        <i class="fab fa-facebook"></i> Facebook
+      </a>
+      <a href="https://www.instagram.com/pawsandfeathers2022" target="_blank">
+        <i class="fab fa-instagram"></i> Instagram
+      </a>
+    </div>
+    <div class="footer-bottom">
+      &copy; 2025 Paws and Feathers. All rights reserved.
+    </div>
+  </footer>
+
+  <script>
+    const scriptURL = "https://script.google.com/macros/s/AKfycbxBoBvBi_cNlyXy8_cprzrsgW1aW25V_lb8arTpqJtQV-IMkXrWF2Hh8t0anSCfvUE-MA/exec";
+    const form = document.getElementById('booking-form');
+    const confirmation = document.getElementById('confirmation');
+
+    form.addEventListener('submit', e => {
+      e.preventDefault();
+
+      const formData = new FormData(form);
+
+      fetch(scriptURL, {
+        method: 'POST',
+        body: formData
+      })
+      .then(response => {
+        if (response.ok) {
+          confirmation.style.display = 'block';
+          form.reset();
+        } else {
+          alert("Failed to submit booking. Try again.");
+        }
+      })
+      .catch(error => alert("Error occurred: " + error.message));
+    });
+  </script>
+
+</body>
+</html>
